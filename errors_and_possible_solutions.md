@@ -1,5 +1,6 @@
 ***
-**ERROR: line 3**
+**ERROR: line 3:**
+
 	Organization code syntax error, should be XX99Y
 
 **Possible solutions:**
