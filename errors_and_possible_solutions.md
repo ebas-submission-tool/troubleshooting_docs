@@ -1,6 +1,8 @@
 Troubleshooting file submission errors
 ============
 
+> ### Note that the lines giving you errors may vary due to the dynamic nature of the metadata fields. Please browse through the error messages and see if they are similar to yours, if they are you could try the proposed solution. If you have any fixes you would like to submit, you could fork the github repository <https://github.com/richard-olav/troubleshooting-ebas-submit-errors.git> or send an e-mail to <ror@nilu.no>.
+
 ***
 ERROR: **line 3**
 
