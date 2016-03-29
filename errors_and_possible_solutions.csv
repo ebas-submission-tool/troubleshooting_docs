@@ -1,3 +1,2 @@
 ErrorMessage, ErrorLine, PossibleSolution
-A, B, C
-C, D, E
+"Organization code syntax error, should be XX99Y",3,"Make sure you have the correct number of charachters, e.g. NO01L" 
