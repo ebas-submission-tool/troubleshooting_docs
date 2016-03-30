@@ -77,20 +77,48 @@ Make sure the data originator is the same in this line as in line 2.
 
 ***
 
-ERROR: ** **
-Instrument type: ** **
+ERROR: **line 3**
 
-        Error Message
+Instrument type: **smps**
+
+        Organization syntax error, should be: code, name, acronym, unit, addr1, addr2, zip, city, country
 
 **Possible solution:**
+Check that the number of commas and order of input fields as as in the string above. Leave empty fields blank, but remember, you still need to provide the correct number of commas as in the string above.  
 
 ***
 
-ERROR: ** **
-Instrument type: ** **
+ERROR: **line 169**
 
-	Error Message
+Instrument type: **smps**
+
+	Station other IDs: syntax error. Should be like 'Station-ID (Framework or project)[, ...]'
 
 **Possible solution:**
+If this field is blank, you can leave this line all together. If you do so, make sure you adjust the the total number of headerlines in line 1 and number of normal comment lines.
 
 ***
+
+ERROR: **line 176**
+
+Instrument type: **smps**
+
+	Originator: syntax error: '<your input is listed here>'. 11 elements needed, should be 'Last name, First name, Email, Organization name, Organization acronym, Organization unit, Address line 1, Address line 2, ZIP code, City, Country'.
+
+**Possible solution**
+Often a comma is left out. Make sure that the number of elements are 11. If there are data fields left out, you still it blank between the commas.
+
+***
+
+ERROR: **line 20**
+
+Instrument type: **smps**
+
+	Regime/Matrix/Component combination 'IMG'/'PM10'/'particle_number_size_distribution' is not defined
+
+**Possible solutions**
+The matrix identifier is case sensitive. Therefore make sure that you use exactly the same syntax as in the documentation. Avoid e.g. PM10 with capital letters, instead use pm10. For correct syntax, see the following link <http://www.gaw-wdca.org/SubmitData/RegularAnnualDataReporting/regularformatcommentsauxheaderline12.aspx> 
+
+***
+
+
