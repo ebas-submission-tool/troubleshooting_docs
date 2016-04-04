@@ -121,4 +121,120 @@ The matrix identifier is case sensitive. Therefore make sure that you use exactl
 
 ***
 
+ERROR: **line 3**
+
+Instrument type: **tsmps**
+	
+	Organization syntax error, should be: code, name, acronym, unit, addr1, addr2, zip, city, country
+
+**Possible solutions**
+When filling in details of the sponsoring organisation you must make sure that all fields are included, and that you have the right amount of commas. If there is an empty value, leave it blank between the commas, seperating the fields, in the right order. 
+
+***
+
+ERROR: **line 2764**
+
+Instrument type: **tsmps**
+
+	Variable 143: value/flag inconsistent: value=9.99, flags=[999]; valid value and missing flag
+	Variable 142: value/flag inconsistent: value=17.2, flags=[999]; valid value and missing flag
+	Variable 138: value/flag inconsistent: value=89.8, flags=[999]; valid value and missing flag
+
+	ERROR   : line 11: number of VSCAL elements (146) does not match NV (145)
+	ERROR   : line 12: number of VMISS elements (146) does not match NV (145)
+	ERROR   : line 158: NSCOML: syntax error
+	ERROR   : line 2764: DATA[146]: value > VMISS is not allowed
+	ERROR   : line 158: Last variabe must have a flag
+
+
+Also:ERROR: line 8852: DATA[11]: value does not match missing value definition (VMISS)
+
+
+**Possible solutions**
+
+***
+
+ERROR: **line 12**
+
+Instrument type: **chemiluminescence_photometer** 
+
+	number of VMISS elements (18) does not match NV (17)
+	
+**Possible solutions**
+
+***
+
+ERROR: **line 89**
+
+Instrument type: **chemiluminescence_photometer**
+
+	unknown metadata element 'Zero/negative values'
+
+**Possible solutions**
+This error message was given because there was a blank space between the metadata element definition and colon. E.g. "Zero/negative values :", instead it should be "Zero/negative values:". Therefore make sure that you follow the exact same syntax as in the documentation. 
+***
+
+ERROR: **line 12**
+
+Instrument type: **chemiluminescence_photometer**
+
+        number of VMISS elements (16) does not match NV (17)
+
+**Possible solutions**
+Maybe it is like, number of missing values are 16, and this does not match the number of variables, which are 17
+
+***
+
+ERROR: **line 19**
+
+Instrument type: **chemiluminescence_photometer**
+
+        illegal metadata element Location for instrument chemiluminescence and component ozone
+
+**Possible solutions**
+
+
+***
+
+ERROR: ** **
+
+Instrument type: ** **
+
+        ErrorMessageHere
+
+**Possible solutions**
+
+
+***
+
+ERROR: ** **
+
+Instrument type: ** **
+
+        ErrorMessageHere
+
+**Possible solutions**
+
+
+***
+
+ERROR: ** **
+
+Instrument type: ** **
+
+        ErrorMessageHere
+
+**Possible solutions**
+
+
+***
+
+
+## Internal Server Error (500).
+
+There could be multiple reasons why you are getting this error. 
+
+* A reason why you are getting this error could be that you are using invalid characters. You can troubleshoot this by checking the charachter encoding. You can check the character encoding using firefox. Open firefox. Go to File-> Open File and then select your nasa-ames file. Then go to View -> Text Encoding and see what type of encoding you file is using. If you e.g. see that you are using "Western" encoding, switch to Unicode. If you have invalid charachters these will likely look something like this, e.g. -40�C instead of -40°C or H�rger instead of Hörger. The character encoding should be set to Unicode or UTF-8. 
+
++ Mention session timeout in documentation.
 
