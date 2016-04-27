@@ -51,8 +51,6 @@ You should check that there is not any inconsistencies
   
 ***
 
-Instrument type: **sun_tracking_filter_radiometer
-
 > **Note** The line you will be getting this error on may vary, due to the dynamic nature of the metadata fields.
 
 	Originator: <surname>, <firstname> not found in ONAME (line 2)        
@@ -62,7 +60,9 @@ Make sure the data originator is the same in this line as in line 2.
 
 ***
 
-Instrument type: **smps**
+##Instrument type: smps
+
+***
 
         Organization syntax error, should be: code, name, acronym, unit, addr1, addr2, zip, city, country
 
@@ -71,16 +71,12 @@ Check that the number of commas and order of input fields as as in the string ab
 
 ***
 
-Instrument type: **smps**
-
 	Station other IDs: syntax error. Should be like 'Station-ID (Framework or project)[, ...]'
 
 **Possible solution:**
 If this field is blank, you can leave this line all together. If you do so, make sure you adjust the the total number of headerlines in line 1 and number of normal comment lines.
 
 ***
-
-Instrument type: **smps**
 
 	Originator: syntax error: '<your input is listed here>'. 11 elements needed, should be 'Last name, First name, Email, Organization name, Organization acronym, Organization unit, Address line 1, Address line 2, ZIP code, City, Country'.
 
@@ -89,8 +85,6 @@ Often a comma is left out. Make sure that the number of elements are 11. If ther
 
 ***
 
-Instrument type: **smps**
-
 	Regime/Matrix/Component combination 'IMG'/'PM10'/'particle_number_size_distribution' is not defined
 
 **Possible solutions**
@@ -98,7 +92,9 @@ The matrix identifier is case sensitive. Therefore make sure that you use exactl
 
 ***
 
-Instrument type: **tsmps**
+Instrument type: tsmps
+
+***
 	
 	Organization syntax error, should be: code, name, acronym, unit, addr1, addr2, zip, city, country
 
@@ -106,8 +102,6 @@ Instrument type: **tsmps**
 When filling in details of the sponsoring organisation you must make sure that all fields are included, and that you have the right amount of commas. If there is an empty value, leave it blank between the commas, seperating the fields, in the right order. 
 
 ***
-
-Instrument type: **tsmps**
 
 	Variable 143: value/flag inconsistent: value=9.99, flags=[999]; valid value and missing flag
 	Variable 142: value/flag inconsistent: value=17.2, flags=[999]; valid value and missing flag
@@ -120,30 +114,28 @@ Instrument type: **tsmps**
 	ERROR   : line 158: Last variabe must have a flag
 
 
-Also:ERROR: line 8852: DATA[11]: value does not match missing value definition (VMISS)
+	Also:ERROR: line 8852: DATA[11]: value does not match missing value definition (VMISS)
 
 
 **Possible solutions**
 
 ***
 
-Instrument type: **chemiluminescence_photometer** 
+##Instrument type: chemiluminescence_photometer
 
+***
 	number of VMISS elements (18) does not match NV (17)
 	
 **Possible solutions**
 
 ***
 
-Instrument type: **chemiluminescence_photometer**
-
 	unknown metadata element 'Zero/negative values'
 
 **Possible solutions**
 This error message was given because there was a blank space between the metadata element definition and colon. E.g. "Zero/negative values :", instead it should be "Zero/negative values:". Therefore make sure that you follow the exact same syntax as in the documentation. 
-***
 
-Instrument type: **chemiluminescence_photometer**
+***
 
         number of VMISS elements (16) does not match NV (17)
 
@@ -152,16 +144,15 @@ Maybe it is like, number of missing values are 16, and this does not match the n
 
 ***
 
-Instrument type: **chemiluminescence_photometer**
-
         illegal metadata element Location for instrument chemiluminescence and component ozone
 
 **Possible solutions**
 
-
 ***
 
-Instrument type: **nephelometer**
+##Instrument type: nephelometer
+
+***
 
         Method ref: syntax error: 'FI0050L_neph_control_lev2_0_0_3'. Should be NN12T_AZaz09+.' (NN12T: Organization code (NN: nation code, 12: 2 digit organization number, T: organization type character), AZaz09+.: free text as method description (legal characters are A-Z, a-z, 0-9, -, _, +, .))
 
@@ -170,19 +161,13 @@ Make sure that the Method reference contains the lab code, see line 3 and unique
 
 ***
 
-Instrument type: **nephelometer**
-
         unknown metadata element 'Zero/negative values'
 
 **Possible solutions**
 
-
 ***
 
-Instrument type: **nephelometer**
-
         data line does not contain x values
-
 	value does not match missing value definition
 
 **Possible solutions**
@@ -197,5 +182,5 @@ There could be multiple reasons why you are getting this error.
 
 * A reason why you are getting this error could be that you are using invalid characters. You can troubleshoot this by checking the charachter encoding. You can check the character encoding using firefox. Open firefox. Go to File-> Open File and then select your nasa-ames file. Then go to View -> Text Encoding and see what type of encoding you file is using. If you e.g. see that you are using "Western" encoding, switch to Unicode. If you have invalid charachters these will likely look something like this, e.g. -40�C instead of -40°C or H�rger instead of Hörger. The character encoding should be set to Unicode or UTF-8. 
 
-+ Mention session timeout in documentation.
+* Mention session timeout in documentation.
 
