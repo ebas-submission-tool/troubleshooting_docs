@@ -232,8 +232,6 @@ This error will occur if the specified "Startdate" does not match the startdate 
 
 ***
 
-***
-
 ## Internal Server Error (500).
 
 There could be multiple reasons why you are getting this error. 
