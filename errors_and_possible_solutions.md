@@ -58,7 +58,7 @@ Make sure that the Method reference contains the lab code, see line 3 and unique
 
 ***
 
-##Instrument type: sun_tracking_filter_radiometer
+##Instrument type: sun tracking filter radiometer
 
 ***
 
