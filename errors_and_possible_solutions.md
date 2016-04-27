@@ -37,6 +37,27 @@ Check that the instrument type is correct. The instrument type is case sensitive
 
 ***
 
+        Method ref: syntax error: 'FI0050L_neph_control_lev2_0_0_3'. Should be NN12T_AZaz09+.' (NN12T: Organization code (NN: nation code, 12: 2 digit organization number, T: organization type character), AZaz09+.: free text as method description (legal characters are A-Z, a-z, 0-9, -, _, +, .))
+
+**Possible solutions**
+Make sure that the Method reference contains the lab code, see line 3 and unique reference to lab internal SOP.
+
+***
+
+        unknown metadata element 'Zero/negative values'
+
+**Possible solutions**
+
+***
+
+        data line does not contain x values
+	value does not match missing value definition
+
+**Possible solutions**
+
+
+***
+
 ##Instrument type: sun_tracking_filter_radiometer
 
 ***
@@ -150,31 +171,15 @@ Maybe it is like, number of missing values are 16, and this does not match the n
 
 ***
 
-##Instrument type: nephelometer
+##Instrument type: TDMPS
 
 ***
 
-        Method ref: syntax error: 'FI0050L_neph_control_lev2_0_0_3'. Should be NN12T_AZaz09+.' (NN12T: Organization code (NN: nation code, 12: 2 digit organization number, T: organization type character), AZaz09+.: free text as method description (legal characters are A-Z, a-z, 0-9, -, _, +, .))
-
-**Possible solutions**
-Make sure that the Method reference contains the lab code, see line 3 and unique reference to lab internal SOP.
-
-***
-
-        unknown metadata element 'Zero/negative values'
+	Check data sanity
 
 **Possible solutions**
 
 ***
-
-        data line does not contain x values
-	value does not match missing value definition
-
-**Possible solutions**
-
-
-***
-
 
 ## Internal Server Error (500).
 
