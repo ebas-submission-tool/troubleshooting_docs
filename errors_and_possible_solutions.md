@@ -21,8 +21,6 @@ Make sure revision date on this line matches the revision date on line 7
 
 ***
 
-Instrument type: **nephelometer**
-
 > **Note:** This is an example of an error were one of the flag columns is wrong. A VMISS error could be for any other of the flag columns aswell 
 
 	VMISS[11]: illegal missing value for flag column: '0.999'. Should be 9.[999]... (groups of 3 digiits). Flag skipped
@@ -32,8 +30,6 @@ Flag column number 12 is incorrect, flag column is set to 0.999 but should be 9.
 
 ***
 
-Instrument type: **nephelometer**
-
 	illegal metadata element X for instrument Y and component Z
 
 **Possible solution:**
@@ -41,7 +37,9 @@ Check that the instrument type is correct. The instrument type is case sensitive
 
 ***
 
-Instrument type: **sun_tracking_filter_radiometer**
+##Instrument type: sun_tracking_filter_radiometer
+
+***
 
         NLHEAD and NNCOM are inconsisten 
 
