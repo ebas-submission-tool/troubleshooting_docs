@@ -1,7 +1,7 @@
 Troubleshooting file submission errors
 ============
 
-> ### Note that the lines giving you errors may vary due to the dynamic nature of the metadata fields. Please browse through the error messages and see if they are similar to yours, if they are you could try the proposed solution. If you have any fixes you would like to submit, you could fork the github repository <https://github.com/richard-olav/troubleshooting-ebas-submit-errors.git> or send an e-mail to <ror@nilu.no>.
+> Note that this is only meant as a simple reference to common errors and proposed solutions. All the errors are sorted by instrument type. Please browse through the error messages (do a simple Ctrl + f) and search parts of your error message, to see if any of them matches yours, if they are similar you could try the proposed solution. If you have any fixes you would like to submit, you could fork the github repository <https://github.com/richard-olav/troubleshooting-ebas-submit-errors.git> or send an e-mail to <ror@nilu.no>.
 
 ## Instrument type: **nephelometer**
 
