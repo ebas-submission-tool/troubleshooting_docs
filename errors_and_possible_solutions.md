@@ -232,6 +232,13 @@ This error will occur if the specified "Startdate" does not match the startdate 
 
 ***
 
+##Instrument type: v-smps
+
+	ERROR   : line x: Variable x: Regime/Matrix/Component combination 'IMG'/'PM10_non_volatile'/'particle_number_size_distribution' is not defined
+
+**Possible solutions**
+You are getting this error because of an syntax issue, matrix "PM10_non_volatile" should be written with only lowercase letters. Therefore matrix should be "pm10_non_volatile" instead.
+
 ## Internal Server Error (500).
 
 There could be multiple reasons why you are getting this error. 
