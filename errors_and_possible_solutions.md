@@ -1,4 +1,4 @@
-#Troubleshooting file errors
+#Troubleshooting file submission errors
 If you experience any file errors, you could checkout our [issue tracker](https://github.com/ebas-submission-tool/troubleshooting/issues) for posting issues related to file errors, or browse errors that other users have experienced in the past in order to see if they could be of any help. This way we hope to share possible solutions to many of the errors people experience when submitting data to EBAS. The issue tracker on Github should only be used to troubleshoot file submission errors or application specific errors for the ebas-submit-tool. For other issues or inquiries, please contact ebas@nilu.no. You could also browse our general list of common errors and possible solutions on this page.
 
 #General list of common errors and possible solutions
