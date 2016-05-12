@@ -1,5 +1,9 @@
 Troubleshooting file submission errors
 ============
+#Troubleshooting file errors
+If you experience any file errors, you could checkout our [issue tracker](https://github.com/ebas-submission-tool/troubleshooting/issues) for posting issues related to file errors, or browse errors that other users have experienced in the past in order to see if they could be of any help. This way we hope to share possible solutions to many of the errors people experience when submitting data to EBAS. The issue tracker on Github should only be used to troubleshoot file submission errors or application specific errors for the ebas-submit-tool. For other issues or inquiries, please contact ebas@nilu.no. You could also browse our general list of common errors and possible solutions on this page.
+
+#General list of common errors and possible solutions
 
 > Note that this is only meant as a simple reference to common errors and proposed solutions. All the errors are sorted by instrument type. Please browse through the error messages (do a simple Ctrl + f) and search parts of your error message, to see if any of them matches yours, if they are similar you could try the proposed solution. If you have any fixes you would like to submit, you could fork the github repository <https://github.com/richard-olav/troubleshooting-ebas-submit-errors.git> or send an e-mail to <ebas@nilu.no>.
 
