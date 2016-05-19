@@ -8,6 +8,12 @@ If you experience any file errors, you could checkout our [issue tracker](https:
 ## Instrument type: **nephelometer**
 
 ***
+	The uploaded file had no header or the header is invalid.
+
+**Possible solution**
+First make sure that the metadata header is included in the file. If you have included the metadata header but you are still getting this error, make sure your file has the correct encoding. It is likely that the file contains some invalid characters. You can check the character encoding using firefox. Open firefox. Go to File-> Open File and then select your nasa-ames file. Then go to View -> Text Encoding and see what type of encoding you file is using. If you e.g. see that you are using "Western" encoding, switch to Unicode. If you have invalid charachters these will likely look something like this, e.g. -40�C instead of -40°C or H�rger instead of Hörger. The character encoding should be set to Unicode or UTF-8. 
+
+***
 
 	Organization code syntax error, should be XX99Y
 
