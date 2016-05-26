@@ -244,8 +244,25 @@ This error will occur if the specified "Startdate" does not match the startdate 
 
 	ERROR   : line x: Variable x: Regime/Matrix/Component combination 'IMG'/'PM10_non_volatile'/'particle_number_size_distribution' is not defined
 
-**Possible solutions**
+**Possible solution**
 You are getting this error because of an syntax issue, matrix "PM10_non_volatile" should be written with only lowercase letters. Therefore matrix should be "pm10_non_volatile" instead.
+
+***
+
+##Instrument type: filter absorption photometer
+
+	ERROR: Statistics: illegal value percentile
+
+**Possible solution**
+
+***
+
+	ERROR: line x DATA[x]: value > VMISS is not allowed
+
+**Possible solution**
+
+
+***
 
 ## Internal Server Error (500).
 
