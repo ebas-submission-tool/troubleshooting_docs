@@ -264,11 +264,14 @@ You are getting this error because of an syntax issue, matrix "PM10_non_volatile
 
 ***
 
-## Internal Server Error (500).
+##Other application specific errors
+
+### Internal Server Error (500).
 
 There could be multiple reasons why you are getting this error. 
 
 * A reason why you are getting this error could be that you are using invalid characters. You can troubleshoot this by checking the charachter encoding. You can check the character encoding using firefox. Open firefox. Go to File-> Open File and then select your nasa-ames file. Then go to View -> Text Encoding and see what type of encoding you file is using. If you e.g. see that you are using "Western" encoding, switch to Unicode. If you have invalid charachters these will likely look something like this, e.g. -40�C instead of -40°C or H�rger instead of Hörger. The character encoding should be set to Unicode or UTF-8. 
 
-* Mention session timeout in documentation.
+##Requested JSON parse failed
 
+You are most likely getting this error due to 
