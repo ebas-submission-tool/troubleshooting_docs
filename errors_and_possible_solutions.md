@@ -11,7 +11,7 @@ If you experience any file errors, you could checkout our [issue tracker](https:
 ***
 	The uploaded file had no header or the header is invalid.
 
-**Possible solution**
+**Possible solution:**
 First make sure that the metadata header is included in the file. If you have included the metadata header but you are still getting this error, make sure your file has the correct encoding. It is likely that the file contains some invalid characters. You can check the character encoding using firefox. Open firefox. Go to File-> Open File and then select your nasa-ames file. Then go to View -> Text Encoding and see what type of encoding you file is using. If you e.g. see that you are using "Western" encoding, switch to Unicode. If you have invalid charachters these will likely look something like this, e.g. -40�C instead of -40°C or H�rger instead of Hörger. The character encoding should be set to Unicode or UTF-8. 
 
 ***
@@ -48,21 +48,21 @@ Check that the instrument type is correct. The instrument type is case sensitive
 
         Method ref: syntax error: 'FI0050L_neph_control_lev2_0_0_3'. Should be NN12T_AZaz09+.' (NN12T: Organization code (NN: nation code, 12: 2 digit organization number, T: organization type character), AZaz09+.: free text as method description (legal characters are A-Z, a-z, 0-9, -, _, +, .))
 
-**Possible solution**
+**Possible solution:**
 Make sure that the Method reference contains the lab code, see line 3 and unique reference to lab internal SOP.
 
 ***
 
         unknown metadata element 'Zero/negative values'
 
-**Possible solution**
+**Possible solution:**
 
 ***
 
         data line does not contain x values
 	value does not match missing value definition
 
-**Possible solution**
+**Possible solution:**
 
 
 ***
@@ -102,28 +102,28 @@ If this field is blank, you can leave this line all together. If you do so, make
 
 	Originator: syntax error: '<your input is listed here>'. 11 elements needed, should be 'Last name, First name, Email, Organization name, Organization acronym, Organization unit, Address line 1, Address line 2, ZIP code, City, Country'.
 
-**Possible solution**
+**Possible solution:**
 Often a comma is left out. Make sure that the number of elements are 11. If there are data fields left out, you still it blank between the commas.
 
 ***
 
 	Regime/Matrix/Component combination 'IMG'/'PM10'/'particle_number_size_distribution' is not defined
 
-**Possible solution**
+**Possible solution:**
 The matrix identifier is case sensitive. Therefore make sure that you use exactly the same syntax as in the documentation. Avoid e.g. PM10 with capital letters, instead use pm10. For correct syntax, see the following link <http://www.gaw-wdca.org/SubmitData/RegularAnnualDataReporting/regularformatcommentsauxheaderline12.aspx> 
 
 ***
 
 	illegal metadata element x for instrument SMPS and component x
 
-**Possible solution**
+**Possible solution:**
 In this case the submitter has been using "Instrument type: SMPS", since the nas-ames parser is case sensitive uppercase letter will cause the parser to not recognize the instrument type, and therefore return the illegal metadata element error. To solve this use lower case letter for the instrument type. "Instrument type: smps"
 
 ***
 
 	start time of first sample (<4 digit year>-<2 digit month>-<2 digit day>T<2 digit hour>:<2 digit minute>:<2 digit second>) is not equal to 'Startdate' specified in metadata (<4 digit year>-<2 digit month>-<2 digit day>T<2 digit hour>:<2 digit minute>:<2 digit second>)
 
-**Possible solution**
+**Possible solution:**
 
 	This error will occur if the specified "Startdate" does not match the startdate of the first sample in your dataset. E.g. if start time of first sample is (2015-03-11T12:00:00) and the 'Startdate' specified in metadata is equal to (2015-03-11T00:00:00), then this inconsistency will give you an error. Therfore make sure that the "Startdate" specified is equal to the first sample value in your dataset.
 
@@ -131,7 +131,7 @@ In this case the submitter has been using "Instrument type: SMPS", since the nas
 	
 	Organization syntax error, should be: code, name, acronym, unit, addr1, addr2, zip, city, country
 
-**Possible solution**
+**Possible solution:**
 When filling in details of the sponsoring organisation you must make sure that all fields are included, and that you have the right amount of commas. If there is an empty value, leave it blank between the commas, seperating the fields, in the right order. 
 
 ***
@@ -150,65 +150,65 @@ When filling in details of the sponsoring organisation you must make sure that a
 	Also:ERROR: line 8852: DATA[11]: value does not match missing value definition (VMISS)
 
 
-**Possible solution**
+**Possible solution:**
 
 ***
 
 	number of VMISS elements (18) does not match NV (17)
 	
-**Possible solution**
+**Possible solution:**
 
 ***
 
 	unknown metadata element 'Zero/negative values'
 
-**Possible solution**
+**Possible solution:**
 This error message was given because there was a blank space between the metadata element definition and colon. E.g. "Zero/negative values :", instead it should be "Zero/negative values:". Therefore make sure that you follow the exact same syntax as in the documentation. 
 
 ***
 
         number of VMISS elements (16) does not match NV (17)
 
-**Possible solution**
+**Possible solution:**
 Maybe it is like, number of missing values are 16, and this does not match the number of variables, which are 17
 
 ***
 
         illegal metadata element Location for instrument chemiluminescence and component ozone
 
-**Possible solution**
+**Possible solution:**
 
 ***
 
 	Check data sanity
 
-**Possible solution**
+**Possible solution:**
 
 ***
 
 	illegal metadata element x for instrument TDMPS and component x
 
-**Possible solution**
+**Possible solution:**
 In this case the submitter has been using "Instrument type: TDMPS", since the nas-ames parser is case sensitive uppercase letter will cause the parser to not recognize the instrument type, and therefore return the illegal metadata element error. To solve this use lower case letter for the instrument type. "Instrument type: tdmps"
 
 ***
 
 	NCOM[56]: syntax error (not "Tag: value") 
 
-**Possible solution**
+**Possible solution:**
 In this case the nasa-ames parser does not recognize the tag and value of the metdata. Very often this is the case when the total number of header lines defined in Line 1 does not match the number of actual headerlines in the metadata. To solve this count the number of lines in you metadata header (e.g. using your text-editor) all the way down including the "Column short headers" (last line before the actual data itself). Then make sure that this matches what you have defined as the total number of headerlines in line 1.
 
 ***
 
 	ERROR   : line 160: NLHEAD and NNCOM are inconsistent
 
-**Possible solution**
+**Possible solution:**
 
 ***
 
 	ERROR   : Instrument type / Manufacturer / Model 'tdmps' / 'TROPOS' / 'TROPOS_TDMPS' is not allowed
 
-**Possible solution**
+**Possible solution:**
 The reason you are getting this error is most likely due to the combination Instrument type / Manufacturer / Model is invalid. In the case above the allowed syntax for instrument model is "TROPOS-TDMPS" instead of "TROPOS_TDMPS". If you are getting a similar error, check the documentation ebas-submit.nilu.no for more information.
 
 
@@ -216,7 +216,7 @@ The reason you are getting this error is most likely due to the combination Inst
 
 	start time of first sample (<4 digit year>-<2 digit month>-<2 digit day>T<2 digit hour>:<2 digit minute>:<2 digit second>) is not equal to 'Startdate' specified in metadata (<4 digit year>-<2 digit month>-<2 digit day>T<2 digit hour>:<2 digit minute>:<2 digit second>)
 
-**Possible solution**
+**Possible solution:**
 
 This error will occur if the specified "Startdate" does not match the startdate of the first sample in your dataset. E.g. if start time of first sample is (2015-03-11T12:00:00) and the 'Startdate' specified in metadata is equal to (2015-03-11T00:00:00), then this inconsistency will give you an error. Therfore make sure that the "Startdate" specified is equal to the first sample value in your dataset.
 
@@ -224,20 +224,20 @@ This error will occur if the specified "Startdate" does not match the startdate 
 
 	ERROR   : line x: Variable x: Regime/Matrix/Component combination 'IMG'/'PM10_non_volatile'/'particle_number_size_distribution' is not defined
 
-**Possible solution**
+**Possible solution:**
 You are getting this error because of an syntax issue, matrix "PM10_non_volatile" should be written with only lowercase letters. Therefore matrix should be "pm10_non_volatile" instead.
 
 ***
 
 	ERROR: Statistics: illegal value percentile
 
-**Possible solution**
+**Possible solution:**
 
 ***
 
 	ERROR: line x DATA[x]: value > VMISS is not allowed
 
-**Possible solution**
+**Possible solution:**
 
 
 ***
