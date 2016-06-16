@@ -1,11 +1,12 @@
-#Troubleshooting file submission errors
+# Troubleshooting file submission errors
+
 If you experience any file errors, you could checkout our [issue tracker](https://github.com/ebas-submission-tool/troubleshooting/issues) for posting issues related to file errors, or browse errors that other users have experienced in the past in order to see if they could be of any help. This way we hope to share possible solutions to many of the errors people experience when submitting data to EBAS. The issue tracker on Github should only be used to troubleshoot file submission errors or application specific errors for the ebas-submit-tool. For other issues or inquiries, please contact ebas@nilu.no. You could also browse our general list of common errors and possible solutions on this page.
 
 #General list of common errors and possible solutions
 
-> Note that this is only meant as a simple reference to common errors and proposed solutions. All the errors are sorted by instrument type. Please browse through the error messages (do a simple Ctrl + f) and search parts of your error message, to see if any of them matches yours, if they are similar you could try the proposed solution. If you have any fixes you would like to submit, you could fork the github repository <https://github.com/richard-olav/troubleshooting-ebas-submit-errors.git> or send an e-mail to <ebas@nilu.no>.
+> Note that this is only meant as a simple reference to common errors and proposed solutions. Please browse through the error messages (do a simple Ctrl + f) and search parts of your error message, to see if any of them matches yours, if they are similar you could try the proposed solution. If you have any fixes you would like to submit, you could fork the github repository <https://github.com/richard-olav/troubleshooting-ebas-submit-errors.git> or send an e-mail to <ebas@nilu.no>.
 
-## Instrument type: **nephelometer**
+## Error messages
 
 ***
 	The uploaded file had no header or the header is invalid.
@@ -66,10 +67,6 @@ Make sure that the Method reference contains the lab code, see line 3 and unique
 
 ***
 
-##Instrument type: sun tracking filter radiometer
-
-***
-
         NLHEAD and NNCOM are inconsisten 
 
 **Possible solution:**
@@ -86,10 +83,6 @@ You should check that there is not any inconsistencies
 
 **Possible solution:**
 Make sure the data originator is the same in this line as in line 2.
-
-***
-
-##Instrument type: smps
 
 ***
 
@@ -135,10 +128,6 @@ In this case the submitter has been using "Instrument type: SMPS", since the nas
 	This error will occur if the specified "Startdate" does not match the startdate of the first sample in your dataset. E.g. if start time of first sample is (2015-03-11T12:00:00) and the 'Startdate' specified in metadata is equal to (2015-03-11T00:00:00), then this inconsistency will give you an error. Therfore make sure that the "Startdate" specified is equal to the first sample value in your dataset.
 
 ***
-
-##Instrument type: tsmps
-
-***
 	
 	Organization syntax error, should be: code, name, acronym, unit, addr1, addr2, zip, city, country
 
@@ -165,9 +154,6 @@ When filling in details of the sponsoring organisation you must make sure that a
 
 ***
 
-##Instrument type: chemiluminescence_photometer
-
-***
 	number of VMISS elements (18) does not match NV (17)
 	
 **Possible solution**
@@ -191,10 +177,6 @@ Maybe it is like, number of missing values are 16, and this does not match the n
         illegal metadata element Location for instrument chemiluminescence and component ozone
 
 **Possible solution**
-
-***
-
-##Instrument type: TDMPS
 
 ***
 
@@ -240,16 +222,12 @@ This error will occur if the specified "Startdate" does not match the startdate 
 
 ***
 
-##Instrument type: v-smps
-
 	ERROR   : line x: Variable x: Regime/Matrix/Component combination 'IMG'/'PM10_non_volatile'/'particle_number_size_distribution' is not defined
 
 **Possible solution**
 You are getting this error because of an syntax issue, matrix "PM10_non_volatile" should be written with only lowercase letters. Therefore matrix should be "pm10_non_volatile" instead.
 
 ***
-
-##Instrument type: filter absorption photometer
 
 	ERROR: Statistics: illegal value percentile
 
