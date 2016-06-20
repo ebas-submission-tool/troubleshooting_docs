@@ -1,12 +1,14 @@
-# Troubleshooting file submission errors
+#Troubleshooting file submission errors
 
-If you experience any file errors, you could checkout our [issue tracker](https://github.com/ebas-submission-tool/troubleshooting/issues) for posting issues related to file errors, or browse errors that other users have experienced in the past in order to see if they could be of any help. This way we hope to share possible solutions to many of the errors people experience when submitting data to EBAS. The issue tracker on Github should only be used to troubleshoot file submission errors or application specific errors for the ebas-submit-tool. For other issues or inquiries, please contact <ebas@nilu.no>. You could also browse our general list of common errors and possible solutions on this page.
+This page contains a list of common errors/warnings and possible solutions. In addition you could checkout our [issue tracker](https://github.com/ebas-submission-tool/troubleshooting/issues) for browsing and/or posting issues related to file errors/warnings, or browse errors that other users have experienced in the past in order to see if they could be of any help. 
 
-#General list of common errors and possible solutions
+We hope to share common errors and possible solutions related to syntactical people experience when submitting data to EBAS. The issue tracker on Github should only be used to troubleshoot file submission errors or application specific errors for the ebas-submit-tool. For other issues or inquiries, please contact <ebas@nilu.no>. 
+
+##General list of common errors and possible solutions
 
 > Note that this is only meant as a simple reference to common errors and proposed solutions. Please browse through the error messages (do a simple Ctrl + f) and search parts of your error message, to see if any of them matches yours, if they are similar you could try the proposed solution. If you have any fixes you would like to submit, you could fork the github repository <https://github.com/ebas-submission-tool/troubleshooting/issues> or send an e-mail to <ebas@nilu.no>.
 
-## Error messages
+###Error messages
 
 ***
 	The uploaded file had no header or the header is invalid.
@@ -53,17 +55,11 @@ Make sure that the Method reference contains the lab code, see line 3 and unique
 
 ***
 
-        unknown metadata element 'Zero/negative values'
-
-**Possible solution:**
-
-***
-
         data line does not contain x values
 	value does not match missing value definition
 
 **Possible solution:**
-
+Make sure that the missing value tags defined in your file contains the same number of elements as your actual data.
 
 ***
 
@@ -157,6 +153,7 @@ When filling in details of the sponsoring organisation you must make sure that a
 	number of VMISS elements (18) does not match NV (17)
 	
 **Possible solution:**
+Number of missing value elements must match the number of dependent data columns.
 
 ***
 
@@ -242,14 +239,12 @@ You are getting this error because of an syntax issue, matrix "PM10_non_volatile
 
 ***
 
-##Other application specific errors
+###Other application specific errors
 
-### Internal Server Error (500).
+####Internal Server Error (500).
+    
+    You might be getting this error because you are using invalid characters. You can troubleshoot this by checking the charachter encoding. You can check the character encoding using firefox. Open firefox. Go to File-> Open File and then select your NASA-ames file. Then go to View -> Text Encoding and see what type of encoding you file is using. If you e.g. see that you are using "Western" encoding, switch to Unicode/UTF-8. If you have invalid charachters these will likely look something like this, e.g. -40�C instead of -40°C or H�rger instead of Hörger. The character encoding should be set to Unicode or UTF-8. 
 
-There could be multiple reasons why you are getting this error. 
+###Requested JSON parse failed
 
-* A reason why you are getting this error could be that you are using invalid characters. You can troubleshoot this by checking the charachter encoding. You can check the character encoding using firefox. Open firefox. Go to File-> Open File and then select your nasa-ames file. Then go to View -> Text Encoding and see what type of encoding you file is using. If you e.g. see that you are using "Western" encoding, switch to Unicode. If you have invalid charachters these will likely look something like this, e.g. -40�C instead of -40°C or H�rger instead of Hörger. The character encoding should be set to Unicode or UTF-8. 
-
-##Requested JSON parse failed
-
-You are most likely getting this error due to 
+    Please check the encoding of your file. You are most likely getting this error due to encoding issues. Make sure that your file is encoded using UTF-8. 
